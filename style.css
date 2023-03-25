@@ -292,22 +292,49 @@ body {
     display: block;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1200px) {
 
   .name {
     left: 30px;
     text-align: left;
-    font-size: 80px;
+    font-size: 30px;
     color: #f6ffce;
     position: absolute;
     margin-left: auto;
     padding-top: 28px !important;
     z-index: 4;
   }
+  .description {
+    font-size: 12px;
+    color: #212121;
+    position: relative;
+    text-align: left;
+    padding-top: 8px;
+    text-shadow: none !important;
+  }
+  .header > .name , .title , .num {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow:   0px -3px 0 #212121,  
+                   0px -3px 0 #212121,
+                   0px  3px 0 #212121,
+                   0px  3px 0 #212121,
+                  -3px  0px 0 #212121,  
+                   3px  0px 0 #212121,
+                  -3px  0px 0 #212121,
+                   3px  0px 0 #212121,
+                  -3px -3px 0 #212121,  
+                   3px -3px 0 #212121,
+                  -3px  3px 0 #212121,
+                   3px  3px 0 #212121,
+                  -3px  9px 0 #212121,
+                   0px  9px 0 #212121,
+                   3px  9px 0 #212121 !important;
+  }
   .carousel-item {
     --items: 10;
-    --width: clamp(250px, 30vw, 350px);
-    --height: clamp(340px, 40vw, 480px);
+    --width: clamp(200px, 30vw, 350px);
+    --height: clamp(280px, 40vw, 480px);
     --x: calc(var(--active) * 800%);
     --y: calc(var(--active) * 200%);
     --rot: calc(var(--active) * 120deg);
@@ -319,7 +346,7 @@ body {
     height: var(--height);
     margin: calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
     border-radius: 10px;
-    top: 50%;
+    top: 40%;
     left: 50%;
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -359,12 +386,25 @@ body {
     height: 100%;
     pointer-events: none;
   }
+  .layout .box {
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    color: #212121;
+    transform-origin: 0% 10%;
+    transform: rotate(-90deg);
+    font-family: 'Bungee';
+    font-size: 8px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    opacity: 0.4;
+  }
   .layout:before {
     content: "";
     position: absolute;
     z-index: 1;
     top: 0;
-    left: 90px;
+    left: 50px;
     width: 10px;
     height: 100%;
     border: 1px solid #212121;
