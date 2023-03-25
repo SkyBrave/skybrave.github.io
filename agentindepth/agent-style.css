@@ -1,0 +1,315 @@
+body {
+  overflow: hidden;
+  font-family: 'Bungee';
+  background: linear-gradient(135deg, #cff2c9, #f6ffce);
+  cursor: none !important;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.header>.name {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0px -6px 0 #212121,
+    0px -6px 0 #212121,
+    0px 6px 0 #212121,
+    0px 6px 0 #212121,
+    -6px 0px 0 #212121,
+    6px 0px 0 #212121,
+    -6px 0px 0 #212121,
+    6px 0px 0 #212121,
+    -6px -6px 0 #212121,
+    6px -6px 0 #212121,
+    -6px 6px 0 #212121,
+    6px 6px 0 #212121,
+    -6px 18px 0 #212121,
+    0px 18px 0 #212121,
+    6px 18px 0 #212121,
+    0 19px 1px rgba(0, 0, 0, .1),
+    0 0 6px rgba(0, 0, 0, .1),
+    0 6px 3px rgba(0, 0, 0, .3),
+    0 12px 6px rgba(0, 0, 0, .2),
+    0 18px 18px rgba(0, 0, 0, .25),
+    0 24px 24px rgba(0, 0, 0, .2),
+    0 36px 36px rgba(0, 0, 0, .15) !important;
+}
+
+.description-box {
+  position: relative !important;
+  z-index: 3;
+  color: #fff;
+  margin-left: auto;
+  margin-bottom: 130px;
+  background: #212121;
+  width: 45vw;
+  /* Use viewport width units for better responsiveness */
+  text-align: left;
+  padding: 20px 20px 20px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-family: 'Montserrat';
+  font-size: clamp(14px, 1vw, 18px);
+  box-sizing: border-box;
+  transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
+  text-shadow: none !important;
+
+  max-width: 100%;
+  /* Ensures the box doesn't exceed the container's width */
+  max-height: 65vh;
+  /* Use viewport height units for better responsiveness */
+  overflow: auto;
+  /* Makes the box scrollable when content overflows */
+}
+
+/* For webkit-based browsers */
+.description-box::-webkit-scrollbar {
+  width: 10px;
+  /* Adjust scrollbar width */
+  padding-right: 20px;
+  background-color: #00000000;
+  /* Adjust scrollbar track background color */
+}
+
+.description-box::-webkit-scrollbar-thumb {
+  background-color: #A9A9A9;
+  /* Adjust scrollbar thumb color */
+  border-radius: 5px;
+  /* Adjust scrollbar thumb border-radius */
+}
+
+.description-box::-webkit-scrollbar-thumb:hover {
+  background-color: #808080;
+  /* Adjust scrollbar thumb color on hover */
+}
+
+
+
+.name {
+  right: 130px !important;
+  font-size: 120px;
+  text-align: end;
+  color: #F6ffce;
+  position: absolute;
+  right: 0;
+  padding-top: 80px !important;
+  z-index: 4;
+}
+
+.description {
+  font-size: 20px;
+  color: #212121;
+  position: relative;
+  text-align: right;
+  padding-top: 10px;
+  text-shadow: none !important;
+}
+
+.carousel {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.layout:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 90px;
+  width: 10px;
+  height: 100%;
+  border: 2px solid #212121;
+  border-top: none;
+  border-bottom: none;
+  opacity: 0.15;
+}
+
+.layout .box {
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  color: #212121;
+  transform-origin: 0% 10%;
+  transform: rotate(-90deg);
+  font-family: 'Bungee';
+  font-size: 9px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+
+.image-logo {
+  position: absolute;
+  z-index: 2;
+  top: 28px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Bungee';
+  pointer-events: all;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  overflow: hidden;
+  padding-bottom: 0.1em;
+}
+
+.cursor {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  --size: 40px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: 3px solid #212121;
+  margin: calc(var(--size) * -0.5) 0 0 calc(var(--size) * -0.5);
+  transition: transform 0.85s cubic-bezier(0, 0.02, 0, 1);
+  display: none;
+  pointer-events: none !important;
+}
+
+@media (pointer: fine) {
+  .cursor {
+    display: block;
+  }
+}
+
+.cursor2 {
+  --size: 2px;
+  transition-duration: 0.7s;
+}
+
+.social-media-icons {
+  position: fixed;
+  bottom: 30px;
+  /* Adjust the distance from the bottom edge */
+  right: 30px;
+  /* Adjust the distance from the right edge */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 100;
+  /* Ensure the icons appear above other elements */
+}
+
+.social-media-icons a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-media-icons i {
+  font-size: 32px;
+}
+
+.header {
+  display: flex;
+}
+
+.clickable {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#image-container {
+  position: relative !important;
+  display: flex !important;
+  align-self: left !important;
+  margin-right: 20px;
+  margin-top: 20px;
+
+  max-width: 40vw;
+  /* Ensures the box doesn't exceed the container's width */
+  max-height: 35vh;
+  /* Use viewport height units for better responsiveness */
+}
+
+.image {
+  width: 50vw;
+  height: auto;
+  object-fit: cover !important;
+  border-radius: 5px;
+  box-shadow: 0px -6px 0 #212121,
+  0px -6px 0 #212121,
+  0px 6px 0 #212121,
+  0px 6px 0 #212121,
+  -6px 0px 0 #212121,
+  6px 0px 0 #212121,
+  -6px 0px 0 #212121,
+  6px 0px 0 #212121,
+  -6px -6px 0 #212121,
+  6px -6px 0 #212121,
+  -6px 6px 0 #212121,
+  6px 6px 0 #212121,
+  -6px 18px 0 #212121,
+  0px 18px 0 #212121,
+  6px 18px 0 #212121,
+  0 19px 1px rgba(0, 0, 0, .1),
+  0 0 6px rgba(0, 0, 0, .1),
+  0 6px 3px rgba(0, 0, 0, .3),
+  0 12px 6px rgba(0, 0, 0, .2),
+  0 18px 18px rgba(0, 0, 0, .25),
+  0 24px 24px rgba(0, 0, 0, .2),
+  0 36px 36px rgba(0, 0, 0, .15) !important;
+}
+h4{
+  font-family: 'Bungee';
+  font-size: 24px;
+}
+.kunye {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  color: #fff;
+  margin-bottom: 130px;
+  
+  background: #212121;
+  /* Use viewport width units for better responsiveness */
+  text-align: left;
+  padding: 20px 20px 20px 20px;
+  border-radius: 5px;
+  font-family: 'Montserrat';
+  font-size: clamp(14px, 1vw, 18px);
+  box-sizing: border-box;
+  transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
+  text-shadow: none !important;
+
+  max-width: 70vh;
+  /* Ensures the box doesn't exceed the container's width */
+  max-height: 25vh;
+  /* Use viewport height units for better responsiveness */
+  overflow: auto;
+  /* Makes the box scrollable when content overflows */
+}
+/* For webkit-based browsers */
+.kunye::-webkit-scrollbar {
+  width: 10px;
+  /* Adjust scrollbar width */
+  padding-right: 20px;
+  background-color: #00000000;
+  /* Adjust scrollbar track background color */
+}
+
+.kunye::-webkit-scrollbar-thumb {
+  background-color: #A9A9A9;
+  /* Adjust scrollbar thumb color */
+  border-radius: 5px;
+  /* Adjust scrollbar thumb border-radius */
+}
+
+.kunye::-webkit-scrollbar-thumb:hover {
+  background-color: #808080;
+  /* Adjust scrollbar thumb color on hover */
+}
