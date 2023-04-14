@@ -52,8 +52,8 @@ Animate
 --------------------*/
 const animate = () => {
   progress = Math.max(0, Math.min(progress, 100))
-  active = Math.floor(progress/100*($items.length-1))
-  
+  active = Math.floor(progress / 100 * ($items.length - 1))
+
   $items.forEach((item, index) => displayItems(item, index, active))
 }
 animate()
@@ -63,7 +63,7 @@ Click on Items
 --------------------*/
 $items.forEach((item, i) => {
   item.addEventListener('click', () => {
-    progress = (i/$items.length) * 100 + 10
+    progress = (i / $items.length) * 100 + 10
     animate()
   })
 })
