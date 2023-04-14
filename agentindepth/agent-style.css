@@ -324,37 +324,10 @@ h4{
                    0px  9px 0 #212121,
                    3px  9px 0 #212121 !important;
   }
-  .carousel-item {
-    --items: 10;
-    --width: clamp(200px, 30vw, 350px);
-    --height: clamp(280px, 40vw, 480px);
-    --x: calc(var(--active) * 800%);
-    --y: calc(var(--active) * 200%);
-    --rot: calc(var(--active) * 120deg);
-    --opacity: calc(var(--zIndex) / var(--items) * 3 - 2);
-    overflow: hidden;
-    position: absolute;
-    z-index: var(--zIndex);
-    width: var(--width);
-    height: var(--height);
-    margin: calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
-    border-radius: 10px;
-    top: 40%;
-    left: 50%;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    transform-origin: 0% 100%;
-    box-shadow: 0 10px 50px 10px rgba(0, 0, 0, 0.2);
-    background: #f6ffce;
-    pointer-events: all;
-    transform: translate(var(--x), var(--y)) rotate(var(--rot));
-    transition: transform 0.8s cubic-bezier(0, 0.02, 0, 1);
-    box-shadow: 0px -6px 0 #212121, 0px -6px 0 #212121, 0px 6px 0 #212121, 0px 6px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px -6px 0 #212121, 6px -6px 0 #212121, -6px 6px 0 #212121, 6px 6px 0 #212121, -6px 18px 0 #212121, 0px 18px 0 #212121, 6px 18px 0 #212121, 0 19px 1px rgb(0 0 0 / 10%), 0 0 6px rgb(0 0 0 / 10%), 0 6px 3px rgb(0 0 0 / 30%), 0 12px 6px rgb(0 0 0 / 20%), 0 18px 18px rgb(0 0 0 / 25%), 0 24px 24px rgb(0 0 0 / 20%), 0 36px 36px rgb(0 0 0 / 15%) !important;
-  }
+
   .description-box {
     position: relative !important;
+    align-items: right;
     z-index: 3;
     color: #fff;
     margin: auto;
@@ -374,7 +347,7 @@ h4{
   
     max-width: 100%;
     /* Ensures the box doesn't exceed the container's width */
-    max-height: 75vh;
+    max-height: 100vw;
     /* Use viewport height units for better responsiveness */
     overflow: auto;
     /* Makes the box scrollable when content overflows */
