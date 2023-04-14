@@ -2,7 +2,7 @@ body {
   overflow: hidden;
   font-family: 'Bungee';
   background: linear-gradient(135deg, #cff2c9, #f6ffce);
-  cursor: none !important;
+  cursor: auto !important;
 
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -12,8 +12,18 @@ body {
   user-select: none;
 }
 
+.link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
 
-
+.link.disabled {
+  pointer-events: none;
+}
 
 .new-button-container {
   position: absolute;
@@ -64,9 +74,9 @@ body {
                  6px -6px 0 #212121,
                 -6px  6px 0 #212121,
                  6px  6px 0 #212121,
-                -6px  18px 0 #212121,
-                 0px  18px 0 #212121,
-                 6px  18px 0 #212121,
+                -6px  9px 0 #212121,
+                 0px  9px 0 #212121,
+                 6px  9px 0 #212121,
                  0 19px 1px rgba(0,0,0,.1),
                  0 0 6px rgba(0,0,0,.1),
                  0 6px 3px rgba(0,0,0,.3),
@@ -80,6 +90,7 @@ body {
 .name {
   right: 130px !important;
   font-size: 120px;
+  text-align: right;
   color: #f6ffce;
   position: absolute;
   right: 0;
@@ -287,11 +298,6 @@ body {
   display: none;
   pointer-events: none !important;
 }
-@media (pointer: fine) {
-  .cursor {
-    display: block;
-  }
-}
 @media screen and (max-width: 1200px) {
 
   .name {
@@ -414,10 +420,6 @@ body {
   }
 }
 
-.cursor2 {
-  --size: 2px;
-  transition-duration: 0.7s;
-}
 
 .social-media-icons {
   position: fixed;

@@ -26,17 +26,24 @@ const $items = document.querySelectorAll('.carousel-item')
 const $cursors = document.querySelectorAll('.cursor')
 
 const displayItems = (item, index, active) => {
-  const zIndex = getZindex([...$items], active)[index]
-  item.style.setProperty('--zIndex', zIndex)
-  item.style.setProperty('--active', (index-active)/$items.length)
+  const zIndex = getZindex([...$items], active)[index];
+  item.style.setProperty('--zIndex', zIndex);
+  item.style.setProperty('--active', (index - active) / $items.length);
 
   // Update the description text based on the active carousel item
   if (index === active) {
     const description = item.dataset.description || ''; // Use the data-description attribute as the description text
     $descriptionText.textContent = description;
     document.querySelector('.description-box').style.opacity = '1';
+
+    // Enable the link for the active carousel item
+    item.querySelector('.link').classList.remove('disabled');
+  } else {
+    // Disable the link for non-active carousel items
+    item.querySelector('.link').classList.add('disabled');
   }
-}
+};
+
 
 
 
@@ -101,81 +108,6 @@ const handleKeyDown = (e) => {
   }
   animate();
 };
-
-
-
-
-let timer;
-
-const createButton = () => {
-  const button = document.createElement('button');
-  button.textContent = 'Learn More';
-  button.classList.add('new-button');
-  button.addEventListener('click', () => {
-    const activeUrl = urls[active];
-    window.open(activeUrl, '_blank');
-  });
-  return button;
-};
-
-const buttonContainer = document.createElement('div');
-buttonContainer.classList.add('new-button-container');
-document.querySelector('.carousel').appendChild(buttonContainer);
-
-const urls = [
-  'agentindepth/agentindepth.html',
-  'page2.html',
-  'page3.html',
-  'page4.html',
-  'agentindepth/agentindepth.html',
-  'page6.html',
-  'page7.html',
-  'page8.html',
-  'page9.html',
-  'page10.html',
-];
-
-const button = createButton();
-buttonContainer.appendChild(button);
-
-$items.forEach((item, index) => {
-  item.addEventListener('mouseenter', () => {
-    // Check if the current item is active before showing the button
-    if (index !== active) return;
-
-    clearTimeout(timer);
-    buttonContainer.style.top = `${item.getBoundingClientRect().top - 50}px`;
-    button.style.opacity = '1';
-    button.style.pointerEvents = 'auto';
-  });
-
-  item.addEventListener('mouseleave', () => {
-    timer = setTimeout(() => {
-      button.style.opacity = '0';
-      button.style.pointerEvents = 'none';
-    }, 2000); // Change the duration here (in milliseconds)
-  });
-
-  button.addEventListener('mouseenter', () => {
-    clearTimeout(timer);
-  });
-
-  button.addEventListener('mouseleave', () => {
-    timer = setTimeout(() => {
-      button.style.opacity = '0';
-      button.style.pointerEvents = 'none';
-    }, 2000); // Change the duration here (in milliseconds)
-  });
-});
-
-
-
-
-
-
-
-
-
 
 /*--------------------
 Listeners
