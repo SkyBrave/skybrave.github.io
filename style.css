@@ -299,7 +299,6 @@ body {
   pointer-events: none !important;
 }
 @media screen and (max-width: 1200px) {
-
   .name {
     left: 30px;
     text-align: left;
