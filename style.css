@@ -367,21 +367,7 @@ body {
     box-shadow: 0px -6px 0 #212121, 0px -6px 0 #212121, 0px 6px 0 #212121, 0px 6px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px -6px 0 #212121, 6px -6px 0 #212121, -6px 6px 0 #212121, 6px 6px 0 #212121, -6px 18px 0 #212121, 0px 18px 0 #212121, 6px 18px 0 #212121, 0 19px 1px rgb(0 0 0 / 10%), 0 0 6px rgb(0 0 0 / 10%), 0 6px 3px rgb(0 0 0 / 30%), 0 12px 6px rgb(0 0 0 / 20%), 0 18px 18px rgb(0 0 0 / 25%), 0 24px 24px rgb(0 0 0 / 20%), 0 36px 36px rgb(0 0 0 / 15%) !important;
   }
   .description-box {
-    position: fixed;
-    margin-left: auto;
-    z-index: 3;
-    color: #fff;
-    bottom: 70px;
-    right: 40px !important;
-    background: #212121;
-    padding: 10px 20px 10px 20px;;
-    border-radius: 5px;
-    font-size: clamp(13px, 1vw, 18px);
-    max-width: 60%;
-    box-sizing: border-box;
-    overflow: auto;
-    max-height: 200px;
-    transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
+    display: none !important;
   }
   .layout {
     position: absolute;
