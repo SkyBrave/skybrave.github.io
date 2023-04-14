@@ -303,7 +303,7 @@ body {
   .name {
     left: 30px;
     text-align: left;
-    font-size: 40px;
+    font-size: 30px;
     color: #f6ffce;
     position: absolute;
     margin-left: auto;
@@ -333,9 +333,9 @@ body {
                    3px -3px 0 #212121,
                   -3px  3px 0 #212121,
                    3px  3px 0 #212121,
-                  -3px  9px 0 #212121,
-                   0px  9px 0 #212121,
-                   3px  9px 0 #212121 !important;
+                  -3px  6px 0 #212121,
+                   0px  6px 0 #212121,
+                   3px  6px 0 #212121 !important;
   }
   .carousel-item {
     --items: 10;

@@ -234,51 +234,7 @@ h4{
   font-family: 'Bungee';
   font-size: 24px;
 }
-.kunye {
-  position: absolute;
-  bottom: 0;
-  z-index: 3;
-  color: #fff;
-  margin-bottom: 130px;
-  
-  background: #212121;
-  /* Use viewport width units for better responsiveness */
-  text-align: left;
-  padding: 20px 20px 20px 20px;
-  border-radius: 5px;
-  font-family: 'Montserrat';
-  font-size: clamp(14px, 1vw, 18px);
-  box-sizing: border-box;
-  transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
-  text-shadow: none !important;
 
-  max-width: 70vh;
-  /* Ensures the box doesn't exceed the container's width */
-  max-height: 25vh;
-  /* Use viewport height units for better responsiveness */
-  overflow: auto;
-  /* Makes the box scrollable when content overflows */
-}
-/* For webkit-based browsers */
-.kunye::-webkit-scrollbar {
-  width: 10px;
-  /* Adjust scrollbar width */
-  padding-right: 20px;
-  background-color: #00000000;
-  /* Adjust scrollbar track background color */
-}
-
-.kunye::-webkit-scrollbar-thumb {
-  background-color: #A9A9A9;
-  /* Adjust scrollbar thumb color */
-  border-radius: 5px;
-  /* Adjust scrollbar thumb border-radius */
-}
-
-.kunye::-webkit-scrollbar-thumb:hover {
-  background-color: #808080;
-  /* Adjust scrollbar thumb color on hover */
-}
 
 @media screen and (max-width: 1200px) {
 
@@ -291,7 +247,6 @@ h4{
   font-size: 50px;
   color: #F6ffce;
   margin: auto;
-  margin-right: 20px;
   position: relative;
   padding-top: 28px !important;
   z-index: 4;
@@ -333,7 +288,7 @@ h4{
     margin: auto;
     margin-bottom: 130px;
     background: #212121;
-    width: 75vw;
+    width: 85vw;
     /* Use viewport width units for better responsiveness */
     text-align: left;
     padding: 20px 20px 20px 20px;
@@ -362,17 +317,7 @@ h4{
     pointer-events: none;
   }
   .layout .box {
-    position: absolute;
-    bottom: 0;
-    left: 12px;
-    color: #212121;
-    transform-origin: 0% 10%;
-    transform: rotate(-90deg);
-    font-family: 'Bungee';
-    font-size: 8px;
-    line-height: 1.4;
-    text-transform: uppercase;
-    opacity: 0.4;
+    display: none !important;
   }
   .layout:before {
     content: "";
