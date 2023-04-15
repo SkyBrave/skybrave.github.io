@@ -54,7 +54,7 @@ body {
   margin: auto;
   margin-bottom: 130px;
   background: #212121;
-  width: 55vw;
+  width: clamp(900px, 65vw, 1800px);
   /* Use viewport width units for better responsiveness */
   text-align: left;
   padding: 20px 20px 20px 20px;
@@ -243,10 +243,11 @@ h4 {
   .image-logo {
     display: none !important;
   }
+  
 
   .name {
     text-align: center;
-    font-size: 50px;
+    font-size: 10vw;
     color: #F6ffce;
     margin: auto;
     position: relative;
@@ -256,7 +257,7 @@ h4 {
 
   .description {
     margin: auto;
-    font-size: 12px;
+    font-size: 4vw;
     color: #212121;
     position: relative;
     text-align: center;
@@ -288,12 +289,13 @@ h4 {
 
   .description-box {
     position: relative !important;
-    align-items: right;
+    align-items: center;
     z-index: 3;
     color: #fff;
     margin: auto;
+    margin-bottom: 30px;
     background: #212121;
-    width: 85vw;
+    width: clamp(300px, 85vw, 1200px);
     /* Use viewport width units for better responsiveness */
     text-align: left;
     padding: 20px 20px 20px 20px;
@@ -306,7 +308,7 @@ h4 {
 
     max-width: 100%;
     /* Ensures the box doesn't exceed the container's width */
-    max-height: 120vw;
+    max-height: 50vh;
     /* Use viewport height units for better responsiveness */
     overflow: auto;
     /* Makes the box scrollable when content overflows */
@@ -339,8 +341,11 @@ h4 {
     border-bottom: none;
     opacity: 0.15;
   }
-}
 
+  .social-media-icons{
+    display: none !important;
+  }
+}
 
 .social-media-icons {
   position: fixed;

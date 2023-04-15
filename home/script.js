@@ -9,8 +9,8 @@ let isDown = false
 /*--------------------
 Contants
 --------------------*/
-const speedWheel = 0.02
-const speedDrag = -0.1
+const speedWheel = 0.1
+const speedDrag = -0.2
 
 /*--------------------
 Get Z
@@ -100,14 +100,7 @@ const handleMouseDown = e => {
 const handleMouseUp = () => {
   isDown = false
 }
-const handleKeyDown = (e) => {
-  if (e.code === 'ArrowRight') {
-    progress += 100 / ($items.length - 1);
-  } else if (e.code === 'ArrowLeft') {
-    progress -= 100 / ($items.length - 1);
-  }
-  animate();
-};
+
 
 /*--------------------
 Listeners
@@ -118,5 +111,4 @@ document.addEventListener('mousemove', handleMouseMove)
 document.addEventListener('mouseup', handleMouseUp)
 document.addEventListener('touchstart', handleMouseDown)
 document.addEventListener('touchmove', handleMouseMove)
-document.addEventListener('touchend', handleMouseUp)
-document.addEventListener('keydown', handleKeyDown);
+document.addEventListener('touchend', handleMouseUp);
