@@ -308,7 +308,7 @@ h4 {
 
     max-width: 100%;
     /* Ensures the box doesn't exceed the container's width */
-    max-height: 50vh;
+    max-height: 65vh;
     /* Use viewport height units for better responsiveness */
     overflow: auto;
     /* Makes the box scrollable when content overflows */

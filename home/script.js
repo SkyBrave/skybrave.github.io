@@ -10,7 +10,7 @@ let isDown = false
 Contants
 --------------------*/
 const speedWheel = 0.1
-const speedDrag = -0.2
+const speedDrag = -0.15
 
 /*--------------------
 Get Z
@@ -44,9 +44,6 @@ const displayItems = (item, index, active) => {
   }
 };
 
-
-
-
 /*--------------------
 Animate
 --------------------*/
@@ -77,7 +74,6 @@ const handleWheel = e => {
   animate()
 }
 
-
 const handleMouseMove = (e) => {
   if (e.type === 'mousemove') {
     $cursors.forEach(($cursor) => {
@@ -100,7 +96,6 @@ const handleMouseDown = e => {
 const handleMouseUp = () => {
   isDown = false
 }
-
 
 /*--------------------
 Listeners
