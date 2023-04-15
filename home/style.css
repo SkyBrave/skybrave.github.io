@@ -1,6 +1,7 @@
 body {
   overflow: hidden;
   font-family: 'Bungee';
+  height: 100vh;
   background: linear-gradient(135deg, #cff2c9, #f6ffce);
   cursor: auto !important;
 
