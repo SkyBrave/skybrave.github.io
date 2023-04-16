@@ -1,7 +1,7 @@
 /*--------------------
 Vars
 --------------------*/
-let progress = 50
+let progress = 10
 let startX = 0
 let active = 0
 let isDown = false
@@ -27,22 +27,29 @@ const $cursors = document.querySelectorAll('.cursor')
 
 const displayItems = (item, index, active) => {
   const zIndex = getZindex([...$items], active)[index];
-  item.style.setProperty('--zIndex', zIndex);
-  item.style.setProperty('--active', (index - active) / $items.length);
+  item.style.setProperty("--zIndex", zIndex);
+  item.style.setProperty("--active", (index - active) / $items.length);
 
   // Update the description text based on the active carousel item
   if (index === active) {
-    const description = item.dataset.description || ''; // Use the data-description attribute as the description text
+    const description = item.dataset.description || ""; // Use the data-description attribute as the description text
     $descriptionText.textContent = description;
-    document.querySelector('.description-box').style.opacity = '1';
+    document.querySelector(".description-box").style.opacity = "1";
 
     // Enable the link for the active carousel item
-    item.querySelector('.link').classList.remove('disabled');
+    item.querySelector(".link").classList.remove("disabled");
+
+    // Show the div for the active carousel item
+    item.querySelector(".click-me").style.display = "block";
   } else {
     // Disable the link for non-active carousel items
-    item.querySelector('.link').classList.add('disabled');
+    item.querySelector(".link").classList.add("disabled");
+
+    // Hide the div for non-active carousel items
+    item.querySelector(".click-me").style.display = "none";
   }
 };
+
 
 /*--------------------
 Animate

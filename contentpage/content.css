@@ -1,7 +1,10 @@
+
 body {
   overflow: hidden !important;
   font-family: 'Bungee';
   background: linear-gradient(135deg, #cff2c9, #f6ffce);
+  background-size: cover !important;
+  
 
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -78,7 +81,6 @@ body {
 .description-box::-webkit-scrollbar {
   width: 10px;
   /* Adjust scrollbar width */
-  padding-right: 20px;
   background-color: #00000000;
   /* Adjust scrollbar track background color */
 }
