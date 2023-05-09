@@ -14,6 +14,15 @@ body {
   user-select: none;
 }
 
+a {
+  color: #F6ffce;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #F6ffce;
+}
+
 .link {
   position: absolute;
   width: 100%;
