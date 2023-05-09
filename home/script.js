@@ -104,6 +104,15 @@ const handleMouseUp = () => {
   isDown = false
 }
 
+const handleArrowKeys = (e) => {
+  if (e.key === 'ArrowLeft') {
+    progress -= 10;
+  } else if (e.key === 'ArrowRight') {
+    progress += 10;
+  }
+  animate();
+};
+
 /*--------------------
 Listeners
 --------------------*/
@@ -114,3 +123,4 @@ document.addEventListener('mouseup', handleMouseUp)
 document.addEventListener('touchstart', handleMouseDown)
 document.addEventListener('touchmove', handleMouseMove)
 document.addEventListener('touchend', handleMouseUp);
+document.addEventListener('keydown', handleArrowKeys);
