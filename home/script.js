@@ -55,8 +55,8 @@ const displayItems = (item, index, active) => {
 Animate
 --------------------*/
 const animate = () => {
-  progress = Math.max(0, Math.min(progress, 100))
-  active = Math.floor(progress / 100 * ($items.length - 1))
+  progress = Math.max(0, Math.min(progress, 90))
+  active = Math.floor(progress / 100 * ($items.length))
 
   $items.forEach((item, index) => displayItems(item, index, active))
 }

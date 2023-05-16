@@ -112,7 +112,7 @@ body {
 }
 
 .carousel-item {
-  --items: 7;
+--items: 7;
   --width: clamp(150px, 30vw, 340px);
   --height: clamp(200px, 40vw, 480px);
   --x: calc(var(--active) * 400%);
@@ -308,7 +308,7 @@ body {
 
 @media screen and (max-width: 2000px) {
   .carousel-item {
-    --items: 7;
+  --items: 7;
     --width: clamp(150px, 30vw, 320px);
     --height: clamp(200px, 40vw, 450px);
     --x: calc(var(--active) * 400%);
@@ -420,7 +420,7 @@ body {
   }
 
   .carousel-item {
-    --items: 7;
+  --items: 7;
     --width: clamp(200px, 30vw, 350px);
     --height: clamp(280px, 40vw, 480px);
     --x: calc(var(--active) * 400%);
